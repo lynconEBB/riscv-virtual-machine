@@ -8,17 +8,20 @@ public class PCRegister extends Component{
     private ReadOnlyBuffer defaultIn;
     private final Buffer defaultOut;
 
-    public PCRegister(ReadOnlyBuffer defaultIn) {
-        this.defaultIn = defaultIn;
+    public PCRegister() {
         defaultOut = new Buffer();
     }
 
     @Override
     public void tick() {
-
+        defaultOut.write(defaultIn.read());
     }
 
     public Buffer getDefaultOut() {
         return  defaultOut;
+    }
+
+    public void setDefaultIn(ReadOnlyBuffer defaultIn) {
+        this.defaultIn = defaultIn;
     }
 }
