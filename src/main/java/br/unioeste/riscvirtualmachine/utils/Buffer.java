@@ -1,7 +1,7 @@
 package br.unioeste.riscvirtualmachine.utils;
 
-import br.unioeste.riscvirtualmachine.ReadOnlyBuffer;
-
+// Classe responsável por realizar a comunicação entre componentes
+// armazenado um dado para ser lido por outro componente
 public class Buffer implements ReadOnlyBuffer {
     private int value;
 
@@ -11,10 +11,12 @@ public class Buffer implements ReadOnlyBuffer {
         this.value = value;
     }
 
+    // Salva do dado
     public void write(int value) {
         this.value = value;
     }
 
+    // Lê o dado salvo
     public int read() {
         return value;
     }

@@ -1,8 +1,13 @@
 package br.unioeste.riscvirtualmachine.components;
 
 import br.unioeste.riscvirtualmachine.utils.Buffer;
-import br.unioeste.riscvirtualmachine.ReadOnlyBuffer;
+import br.unioeste.riscvirtualmachine.utils.ReadOnlyBuffer;
+import javafx.scene.control.CheckBox;
 
+import java.util.List;
+
+// Classe responsável por escrever as flags necessárias para
+// cada instrução
 public class ControlUnit extends Component{
     private final ReadOnlyBuffer defaultIn;
     private final Buffer branchFlag;
@@ -12,6 +17,7 @@ public class ControlUnit extends Component{
     private final Buffer memWriteFlag;
     private final Buffer ALUSrcFlag;
     private final Buffer regWriteFlag;
+    private final List<CheckBox> flagCheckBoxes;
 
     public final static int ADDI_OP = 0x13;
     public final static int BRANCH_OP = 0x63;
@@ -19,7 +25,8 @@ public class ControlUnit extends Component{
     public final static int LW_OP = 0x3;
     public final static int SW_OP = 0x23;
 
-    public ControlUnit(ReadOnlyBuffer defaultIn) {
+    public ControlUnit(List<CheckBox> checkBoxList, ReadOnlyBuffer defaultIn) {
+        this.flagCheckBoxes = checkBoxList;
         this.defaultIn = defaultIn;
         regWriteFlag = new Buffer();
         ALUSrcFlag = new Buffer();
@@ -30,6 +37,8 @@ public class ControlUnit extends Component{
         memToRegFlag = new Buffer();
     }
 
+    // Atualiza os buffers de flag e os componentes visuais que identificam
+    // as flags na janela, baseando-se na instrução recebida
     @Override
     public void tick() {
         int opcode = defaultIn.read() & 0x7f;
@@ -45,12 +54,26 @@ public class ControlUnit extends Component{
         }
 
         branchFlag.write(outFlags[0]);
+        flagCheckBoxes.get(0).setSelected(outFlags[0] == 1);
+
         memToRegFlag.write(outFlags[1]);
+        flagCheckBoxes.get(1).setSelected(outFlags[1] == 1);
+
         menReadFlag.write(outFlags[2]);
+        flagCheckBoxes.get(2).setSelected(outFlags[2] == 1);
+
         ALUOpFlag.write(outFlags[3]);
+        flagCheckBoxes.get(3).setSelected(outFlags[3] == 2);
+        flagCheckBoxes.get(4).setSelected(outFlags[3] == 1);
+
         memWriteFlag.write(outFlags[4]);
+        flagCheckBoxes.get(5).setSelected(outFlags[4] == 1);
+
         ALUSrcFlag.write(outFlags[5]);
+        flagCheckBoxes.get(6).setSelected(outFlags[5] == 1);
+
         regWriteFlag.write(outFlags[6]);
+        flagCheckBoxes.get(7).setSelected(outFlags[6] == 1);
     }
 
     public Buffer getBranchFlag() {

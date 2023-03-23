@@ -1,7 +1,7 @@
 package br.unioeste.riscvirtualmachine.components;
 
 import br.unioeste.riscvirtualmachine.utils.Buffer;
-import br.unioeste.riscvirtualmachine.ReadOnlyBuffer;
+import br.unioeste.riscvirtualmachine.utils.ReadOnlyBuffer;
 
 public class Alu extends Component{
 

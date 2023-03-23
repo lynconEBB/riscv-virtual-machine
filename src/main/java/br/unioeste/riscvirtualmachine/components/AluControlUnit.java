@@ -1,8 +1,9 @@
 package br.unioeste.riscvirtualmachine.components;
 
 import br.unioeste.riscvirtualmachine.utils.Buffer;
-import br.unioeste.riscvirtualmachine.ReadOnlyBuffer;
+import br.unioeste.riscvirtualmachine.utils.ReadOnlyBuffer;
 
+// Identifica a operação a ser realizada pela ALU para cada instrução
 public class AluControlUnit extends Component {
 
     private final ReadOnlyBuffer instruction;
@@ -15,6 +16,9 @@ public class AluControlUnit extends Component {
         this.defaultOut = new Buffer();
     }
 
+    // Atualiza o buffer de saida a partir da flag AluOp
+    // caso aluOp seja 2, o tipo de operação é identificado
+    // baseando-se nos bits recebidos da instrução
     @Override
     public void tick() {
         int flag = aluOp.read();

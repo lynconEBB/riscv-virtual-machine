@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MainApplication extends Application {
+
+    // Inicializa componentes JavaFX e controlador
     @Override
     public void start(Stage stage) throws IOException {
 
@@ -23,6 +25,7 @@ public class MainApplication extends Application {
         stage.show();
     }
 
+    // Chama inicialização do JavaFX
     public static void main(String[] args) {
         launch();
     }

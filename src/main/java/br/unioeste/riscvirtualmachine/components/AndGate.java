@@ -1,8 +1,9 @@
 package br.unioeste.riscvirtualmachine.components;
 
 import br.unioeste.riscvirtualmachine.utils.Buffer;
-import br.unioeste.riscvirtualmachine.ReadOnlyBuffer;
+import br.unioeste.riscvirtualmachine.utils.ReadOnlyBuffer;
 
+// Componente para realizar a operação and
 public class AndGate extends Component{
 
     private final ReadOnlyBuffer operand1;
@@ -15,6 +16,7 @@ public class AndGate extends Component{
         this.defaultOut = new Buffer();
     }
 
+    // Aciona a saida padrão caso os dois operandos sejam diferentes de 0
     @Override
     public void tick() {
         if (operand1.read() == 1 && operand2.read() == 1) {

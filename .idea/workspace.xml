@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="574d9257-ce54-4ed8-a574-0de641eb7984" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/utils/MemoryEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/ReadOnlyBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/utils/ReadOnlyBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/Adder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/Adder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/Alu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/Alu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/AluControlUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/AluControlUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/AndGate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/AndGate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/BitSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/BitSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/ControlUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/ControlUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/DataMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/DataMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/ImmediateGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/ImmediateGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/InstructionMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/InstructionMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/Multiplexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/Multiplexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/NotGate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/NotGate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/PCRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/PCRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/RegisterFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/components/RegisterFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/utils/Buffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/utils/Buffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/utils/FlagsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/unioeste/riscvirtualmachine/utils/FlagsUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/unioeste/riscvirtualmachine/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/unioeste/riscvirtualmachine/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testFiles/teste2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/teste2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testFiles/teste2_detalhes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/teste2_detalhes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testFiles/teste3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFiles/teste3.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NN0pBwTIr2GoaXmG9EWk9hM3q7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Microsoft/Dev/riscv-virtual-machine&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Microsoft\Dev\riscv-virtual-machine" />
+      <recent name="C:\Users\Microsoft\Dev\riscv-virtual-machine\src\main\resources\br\unioeste\riscvirtualmachine" />
+      <recent name="C:\Users\Microsoft\Dev\riscv-virtual-machine\src\main\resources" />
+      <recent name="C:\Users\Microsoft\Dev\riscv-virtual-machine\src\main\resources\testFiles" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.unioeste.riscvirtualmachine.MainApplication" />
+      <module name="riscv-virtual-machine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.unioeste.riscvirtualmachine.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="574d9257-ce54-4ed8-a574-0de641eb7984" name="Changes" comment="" />
+      <created>1679489412746</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679489412746</updated>
+      <workItem from="1679489413827" duration="1564000" />
+      <workItem from="1679490988349" duration="19794000" />
+      <workItem from="1679575919032" duration="16646000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

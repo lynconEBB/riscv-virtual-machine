@@ -2,17 +2,26 @@ package br.unioeste.riscvirtualmachine;
 
 import br.unioeste.riscvirtualmachine.components.*;
 import br.unioeste.riscvirtualmachine.utils.Buffer;
+import br.unioeste.riscvirtualmachine.utils.MemoryEntry;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+// Classe representando o processador
 public class Processor {
 
+    // Lista de componentes do processador
     private final List<Component> components;
 
-    public Processor() {
+    // Construtor do Processador, responsável por inicializar e configurar as entradas
+    // e saidas de cada componente
+    public Processor(File file, TableView<MemoryEntry> memoryTable, List<Label> registerLabels, List<CheckBox> flagCheckBoxes) throws FileNotFoundException {
         components = new ArrayList<>();
 
         PCRegister pcRegister = new PCRegister();
@@ -20,16 +29,13 @@ public class Processor {
 
         InstructionMemory instructionMemory = new InstructionMemory(pcRegister.getDefaultOut());
         components.add(instructionMemory);
-        try {
-            instructionMemory.load(new FileInputStream("testFiles/teste1.txt"));
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+        instructionMemory.load(new FileInputStream(file));
 
-        ControlUnit controlUnit = new ControlUnit(instructionMemory.getDefaultOut());
+        ControlUnit controlUnit = new ControlUnit(flagCheckBoxes, instructionMemory.getDefaultOut());
         components.add(controlUnit);
 
         RegisterFile registerFile = new RegisterFile(
+                registerLabels,
                 controlUnit.getRegWriteFlag(),
                 instructionMemory.getDefaultOut(),
                 instructionMemory.getDefaultOut(),
@@ -57,6 +63,7 @@ public class Processor {
         components.add(alu);
 
         DataMemory dataMemory = new DataMemory(
+                memoryTable,
                 alu.getResult(),
                 registerFile.getReadData2(),
                 controlUnit.getMemWriteFlag(),
@@ -90,12 +97,24 @@ public class Processor {
         pcRegister.setDefaultIn(muxJump.getDefaultOut());
     }
 
-    public void tick() {
+    // Atualiza todos os componentes presentes na lista de componente
+    // retorna uma variavel booleana indicando se o programa pode continuar
+    // executando ou não
+    public boolean tick() {
         for (Component component : components) {
             component.tick();
         }
         for (Component component : components) {
             component.lateTick();
         }
+        InstructionMemory instructionMemory = (InstructionMemory) components.get(1);
+        return (getCurrentPC() / 4) < instructionMemory.getInstructionsCount();
     }
+
+    // Retorna a instrução a ser executada neste ciclo
+    public int getCurrentPC() {
+        Multiplexer finalMux = (Multiplexer) components.get(16);
+        return finalMux.getDefaultOut().read();
+    }
+
 }
