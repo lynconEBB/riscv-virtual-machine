@@ -1,6 +1,6 @@
 package br.unioeste.riscvirtualmachine.components;
 
-import br.unioeste.riscvirtualmachine.Buffer;
+import br.unioeste.riscvirtualmachine.utils.Buffer;
 import br.unioeste.riscvirtualmachine.ReadOnlyBuffer;
 
 public class NotGate extends Component{

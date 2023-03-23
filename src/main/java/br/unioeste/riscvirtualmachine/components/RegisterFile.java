@@ -1,9 +1,9 @@
 package br.unioeste.riscvirtualmachine.components;
 
-import br.unioeste.riscvirtualmachine.Buffer;
+import br.unioeste.riscvirtualmachine.utils.Buffer;
 import br.unioeste.riscvirtualmachine.ReadOnlyBuffer;
 
-public class RegisterBank extends Component{
+public class RegisterFile extends Component{
 
     private final ReadOnlyBuffer regWrite;
     private final ReadOnlyBuffer register1;
@@ -14,7 +14,7 @@ public class RegisterBank extends Component{
     private final Buffer readData2;
     private final int[] registers;
 
-    public RegisterBank(ReadOnlyBuffer regWrite,
+    public RegisterFile(ReadOnlyBuffer regWrite,
                         ReadOnlyBuffer register1,
                         ReadOnlyBuffer register2,
                         ReadOnlyBuffer writeRegister) {

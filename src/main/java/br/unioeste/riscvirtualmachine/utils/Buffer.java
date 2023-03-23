@@ -1,6 +1,8 @@
-package br.unioeste.riscvirtualmachine;
+package br.unioeste.riscvirtualmachine.utils;
 
-public class Buffer implements ReadOnlyBuffer{
+import br.unioeste.riscvirtualmachine.ReadOnlyBuffer;
+
+public class Buffer implements ReadOnlyBuffer {
     private int value;
 
     public Buffer() {}

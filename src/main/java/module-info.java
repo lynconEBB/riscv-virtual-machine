@@ -5,4 +5,6 @@ module br.unioeste.riscvirtualmachine {
 
     opens br.unioeste.riscvirtualmachine to javafx.fxml;
     exports br.unioeste.riscvirtualmachine;
+    exports br.unioeste.riscvirtualmachine.utils;
+    opens br.unioeste.riscvirtualmachine.utils to javafx.fxml;
 }

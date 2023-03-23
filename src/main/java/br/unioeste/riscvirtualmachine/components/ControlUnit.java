@@ -1,6 +1,6 @@
 package br.unioeste.riscvirtualmachine.components;
 
-import br.unioeste.riscvirtualmachine.Buffer;
+import br.unioeste.riscvirtualmachine.utils.Buffer;
 import br.unioeste.riscvirtualmachine.ReadOnlyBuffer;
 
 public class ControlUnit extends Component{
@@ -35,10 +35,12 @@ public class ControlUnit extends Component{
         int opcode = defaultIn.read() & 0x7f;
         int[] outFlags;
         switch (opcode) {
-            case ADDI_OP, SW_OP -> outFlags = new int[]{0, 0, 0, 0, 1, 1, 0};
+            case ADDI_OP -> outFlags = new int[]{0, 0, 0, 0, 0, 1, 1};
             case BRANCH_OP -> outFlags = new int[]{1, 0, 0, 1, 0, 0, 0};
             case REG_OP -> outFlags = new int[]{0, 0, 0, 2, 0, 0, 1};
             case LW_OP -> outFlags = new int[]{0, 1, 1, 0, 0, 1, 1};
+            case SW_OP -> outFlags = new int[]{0, 0, 0, 0, 1, 1, 0};
+
             default -> outFlags = new int[7];
         }
 

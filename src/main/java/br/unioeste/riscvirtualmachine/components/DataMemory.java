@@ -1,6 +1,6 @@
 package br.unioeste.riscvirtualmachine.components;
 
-import br.unioeste.riscvirtualmachine.Buffer;
+import br.unioeste.riscvirtualmachine.utils.Buffer;
 import br.unioeste.riscvirtualmachine.ReadOnlyBuffer;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public class DataMemory extends Component{
     private final ReadOnlyBuffer memWrite;
     private final ReadOnlyBuffer memRead;
     private final Buffer defaultOut;
-    private final List<Integer> memory;
+    private final int[] memory;
 
     public DataMemory(ReadOnlyBuffer in, ReadOnlyBuffer writeData, ReadOnlyBuffer memWrite, ReadOnlyBuffer memRead) {
         this.address = in;
@@ -20,12 +20,18 @@ public class DataMemory extends Component{
         this.memWrite = memWrite;
         this.memRead = memRead;
         this.defaultOut = new Buffer();
-        this.memory = new ArrayList<>();
+        this.memory = new int[64];
     }
 
     @Override
     public void tick() {
-        defaultOut.write(memory.get(address.read()));
+        int index = address.read() / 4;
+
+        if (memRead.read() == 1)
+            defaultOut.write(memory[index]);
+
+        if (memWrite.read() == 1)
+           memory[index] = writeData.read();
     }
 
     public Buffer getDefaultOut() {
