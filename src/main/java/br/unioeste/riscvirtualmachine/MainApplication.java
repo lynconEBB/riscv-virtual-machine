@@ -14,7 +14,9 @@ public class MainApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        MainController controller = (MainController) fxmlLoader.getController();
+        String css = this.getClass().getResource("global.css").toExternalForm();
+        scene.getStylesheets().add(css);
+        MainController controller = fxmlLoader.getController();
         controller.setMyStage(stage);
         stage.setTitle("RISC-V Virtual Machine");
         stage.setScene(scene);
